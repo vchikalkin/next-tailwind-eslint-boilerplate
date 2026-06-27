@@ -11,5 +11,6 @@
   "quoteProps": "as-needed",
   "proseWrap": "preserve",
   "objectWrap": "preserve",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

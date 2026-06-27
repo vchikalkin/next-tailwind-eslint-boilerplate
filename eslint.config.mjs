@@ -1,5 +1,6 @@
-import { sheriff } from "eslint-config-sheriff";
-import { defineConfig } from "eslint/config";
+import { sheriff } from 'eslint-config-sheriff';
+import { defineConfig } from 'eslint/config';
+import eslintPluginTailwindcss from 'eslint-plugin-tailwindcss';
 
 const sheriffOptions = {
   // files: ["src/**/*"], // Only the files in the src directory will be linted.
@@ -15,4 +16,12 @@ const sheriffOptions = {
   tsconfigRootDir: import.meta.dirname,
 };
 
-export default defineConfig(sheriff(sheriffOptions));
+export default defineConfig(sheriff(sheriffOptions), {
+  extends: [eslintPluginTailwindcss.configs.recommended],
+  settings: {
+    tailwindcss: {
+      cssConfigPath: './app/globals.css',
+      callees: ['classnames', 'clsx', 'ctl', 'cva', 'cn'],
+    },
+  },
+});

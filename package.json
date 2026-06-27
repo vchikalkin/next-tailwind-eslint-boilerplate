@@ -21,6 +21,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-sheriff": "^31.4.0",
+    "eslint-plugin-tailwindcss": "^4.0.4",
+    "prettier": "^3.8.5",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
