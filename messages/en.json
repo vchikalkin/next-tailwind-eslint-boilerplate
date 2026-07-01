@@ -16,5 +16,11 @@
     "label": "Language",
     "ru": "Русский",
     "en": "English"
+  },
+  "ThemeSwitcher": {
+    "label": "Theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
   }
 }

@@ -12,7 +12,7 @@ export function LocaleSwitcher() {
   return (
     <nav
       aria-label={t('label')}
-      className="fixed top-4 right-4 z-50 flex gap-1 rounded-full border border-zinc-200 bg-white/90 p-1 text-sm shadow-sm backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/90"
+      className="flex gap-1 rounded-full border border-zinc-200 bg-white/90 p-1 text-sm shadow-sm backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/90"
     >
       {routing.locales.map((nextLocale) => 
         { return <Link

@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import type { PropsWithChildren } from 'react';
-import { LocaleSwitcher } from '@/components/locale-switcher';
 import { SetHtmlLang } from '@/components/set-html-lang';
+import { SiteControls } from '@/components/site-controls';
 import { routing } from '@/i18n/routing';
 
 interface LocaleLayoutProps extends PropsWithChildren {
@@ -27,7 +27,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <SetHtmlLang locale={locale} />
-      <LocaleSwitcher />
+      <SiteControls />
       {children}
     </NextIntlClientProvider>
   );
