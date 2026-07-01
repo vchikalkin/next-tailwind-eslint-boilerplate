@@ -1,4 +1,4 @@
-/* eslint-disable func-style */
+ 
 import type { MDXComponents } from 'mdx/types';
 
 const components: MDXComponents = {};

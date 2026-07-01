@@ -1,0 +1,20 @@
+{
+  "HomePage": {
+    "title": "Чтобы начать, отредактируйте page.tsx",
+    "descriptionPrefix": "Ищете отправную точку или инструкции? Загляните в",
+    "descriptionMiddle": "или в",
+    "descriptionSuffix": ".",
+    "templates": "Шаблоны",
+    "learning": "Обучение",
+    "deploy": "Деплой",
+    "docs": "Документация"
+  },
+  "MdxPage": {
+    "title": "Пример MDX"
+  },
+  "LocaleSwitcher": {
+    "label": "Язык",
+    "ru": "Русский",
+    "en": "English"
+  }
+}

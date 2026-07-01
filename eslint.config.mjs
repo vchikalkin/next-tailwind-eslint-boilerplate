@@ -16,16 +16,22 @@ const sheriffOptions = {
   tsconfigRootDir: import.meta.dirname,
 };
 
-export default defineConfig(sheriff(sheriffOptions), {
-  extends: [eslintPluginTailwindcss.configs.recommended],
-  settings: {
-    tailwindcss: {
-      cssConfigPath: './app/globals.css',
-      callees: ['classnames', 'clsx', 'ctl', 'cva', 'cn'],
+export default defineConfig(
+  {
+    ignores: ['postcss.config.mjs'],
+  },
+  sheriff(sheriffOptions),
+  {
+    extends: [eslintPluginTailwindcss.configs.recommended],
+    settings: {
+      tailwindcss: {
+        cssConfigPath: './app/globals.css',
+        callees: ['classnames', 'clsx', 'ctl', 'cva', 'cn'],
+      },
+    },
+    rules: {
+      'func-style': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
     },
   },
-  rules: {
-    'func-style': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-  },
-});
+);
