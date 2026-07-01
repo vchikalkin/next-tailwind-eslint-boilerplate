@@ -21,6 +21,7 @@ export function LocaleSwitcher() {
 
         return (
           <Link
+            replace
             key={nextLocale}
             href={pathname}
             locale={nextLocale}
