@@ -7,10 +7,13 @@
     "templates": "Шаблоны",
     "learning": "Обучение",
     "deploy": "Деплой",
-    "docs": "Документация"
+    "docs": "Документация",
+    "badge": "Boilerplate",
+    "mdx": "MDX"
   },
   "MdxPage": {
-    "title": "Пример MDX"
+    "title": "Пример MDX",
+    "back": "На главную"
   },
   "LocaleSwitcher": {
     "label": "Язык",

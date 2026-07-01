@@ -2,8 +2,11 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { cn } from '@/lib/utils';
 
 interface HomePageProps {
   readonly params: Promise<{ locale: string }>;
@@ -31,6 +34,7 @@ export default async function HomePage({ params }: HomePageProps) {
           height={20}
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+          <Badge variant="secondary">{t('badge')}</Badge>
           <h1 className="max-w-xs text-3xl leading-10 font-semibold tracking-tight text-black dark:text-zinc-50">
             {t('title')}
           </h1>
@@ -54,10 +58,13 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] md:w-[158px] dark:hover:bg-[#ccc]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
+            className={cn(
+              buttonVariants({ variant: 'default' }),
+              'h-12 w-full rounded-full md:w-[158px]',
+            )}
           >
             <Image
               className="dark:invert"
@@ -69,10 +76,13 @@ export default async function HomePage({ params }: HomePageProps) {
             {t('deploy')}
           </a>
           <Link
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
             href="/mdx"
+            className={cn(
+              buttonVariants({ variant: 'outline' }),
+              'h-12 w-full rounded-full md:w-[158px]',
+            )}
           >
-            MDX
+            {t('mdx')}
           </Link>
         </div>
       </main>

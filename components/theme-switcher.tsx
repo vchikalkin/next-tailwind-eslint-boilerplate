@@ -3,6 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { useSyncExternalStore } from 'react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 type ThemeOption = 'light' | 'dark' | 'system';
 
@@ -94,7 +96,7 @@ export function ThemeSwitcher() {
   );
 
   const shellClassName =
-    'flex gap-1 rounded-full border border-zinc-200 bg-white/90 p-1 text-sm shadow-sm backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/90';
+    'flex gap-1 rounded-full border border-border bg-background/90 p-1 text-sm shadow-sm backdrop-blur';
 
   if (!isMounted) {
     return (
@@ -102,7 +104,7 @@ export function ThemeSwitcher() {
         {themeOptions.map((option) => 
           { return <span
             key={option}
-            className="size-8 rounded-full"
+            className="size-10 rounded-full"
             aria-hidden="true"
           /> }
         )}
@@ -118,22 +120,19 @@ export function ThemeSwitcher() {
         const isActive = activeTheme === option;
 
         return (
-          <button
+          <Button
             key={option}
-            type="button"
+            size="icon"
+            variant={isActive ? 'default' : 'ghost'}
             aria-label={t(option)}
             aria-pressed={isActive}
-            className={`rounded-full p-2 transition-colors ${
-              isActive
-                ? 'bg-foreground text-background'
-                : 'text-zinc-600 hover:text-foreground dark:text-zinc-400 dark:hover:text-zinc-50'
-            }`}
+            className={cn('rounded-full')}
             onClick={() => {
               setTheme(option);
             }}
           >
             {renderThemeIcon(option)}
-          </button>
+          </Button>
         );
       })}
     </nav>

@@ -7,10 +7,13 @@
     "templates": "Templates",
     "learning": "Learning",
     "deploy": "Deploy Now",
-    "docs": "Documentation"
+    "docs": "Documentation",
+    "badge": "Boilerplate",
+    "mdx": "MDX"
   },
   "MdxPage": {
-    "title": "MDX example"
+    "title": "MDX example",
+    "back": "Back home"
   },
   "LocaleSwitcher": {
     "label": "Language",

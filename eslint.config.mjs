@@ -34,4 +34,10 @@ export default defineConfig(
       '@typescript-eslint/explicit-module-boundary-types': 'off',
     },
   },
+  {
+    files: ['lib/utils.ts'],
+    rules: {
+      'tailwindcss/no-custom-classname': 'off',
+    },
+  },
 );
