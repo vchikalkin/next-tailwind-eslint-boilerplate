@@ -24,4 +24,8 @@ export default defineConfig(sheriff(sheriffOptions), {
       callees: ['classnames', 'clsx', 'ctl', 'cva', 'cn'],
     },
   },
+  rules: {
+    'func-style': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
 });

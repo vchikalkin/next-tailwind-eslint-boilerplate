@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
+  extension: /\.mdx?$/u,
   // Add markdown plugins here, as desired
 });
 
