@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SiteImage from 'next/image';
 import { notFound } from 'next/navigation';
 import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -25,7 +25,7 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <div className="flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex w-full max-w-3xl flex-1 flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-        <Image
+        <SiteImage
           priority
           className="dark:invert"
           src="/next.svg"
@@ -66,7 +66,7 @@ export default async function HomePage({ params }: HomePageProps) {
               'h-12 w-full rounded-full md:w-[158px]',
             )}
           >
-            <Image
+            <SiteImage
               className="dark:invert"
               src="/vercel.svg"
               alt="Vercel logomark"

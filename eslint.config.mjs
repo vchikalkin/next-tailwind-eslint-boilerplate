@@ -18,7 +18,7 @@ const sheriffOptions = {
 
 export default defineConfig(
   {
-    ignores: ['postcss.config.mjs'],
+    ignores: ['postcss.config.mjs', 'export-images.config.js'],
   },
   sheriff(sheriffOptions),
   {
